@@ -1,0 +1,235 @@
+﻿* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-image: url("https://images.unsplash.com/photo-1500305614571-ae5b6592e65d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#All {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto;
+	font-size: 0;
+}
+
+#Header {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 180px;
+	text-align: center;
+	padding: 15px 0;
+}
+
+
+#Left {
+	padding: 180px 0 50px 0;
+	width: 100%;
+	height: 100%;
+}
+
+.sidebar_left {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	width: 15%;
+	min-height: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.Content {
+
+	display: inline-block;
+	margin-bottom: 50px;
+	width: 70%;
+	min-height: 100%;
+	font-size: 20px;
+	text-align: left;
+	padding: 2% 5%;
+}
+
+.sidebar_right {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	width: 15%;
+	min-height: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.type {
+	display: block;
+	width: 80%;
+	margin: 15px auto;
+}
+
+
+#Footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 50px;
+	background: linear-gradient(#252525, #353535);
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+}
+
+#NewAccount {
+	font-family: 'Merienda',
+		cursive;
+	float: left;
+}
+
+.container {
+	margin: auto;
+	background-color: #f5f5f5;
+	width: 800px;
+	padding-bottom: 20px;
+}
+
+.top {
+	float: right;
+}
+
+.top h3 {
+	font-family: 微軟正黑體;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.form-group {
+	font-family: 微軟正黑體;
+	font-size: 16px;
+}
+
+#message_type {
+	color: aquamarine;
+	font-family: 'Merienda',
+		cursive;
+	font-size: 5rem;
+}
+
+input[id="NewAccount"] {
+	display: block;
+	/*position:absolute;*/
+	margin: 5px 80% 5px 0%;
+	width: 280px;
+	height: 50px;
+
+	font-weight: 400;
+	color: #F2FFF2;
+	background: rgba(0, 0, 0, 0.3);
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	border: 10px 10px solid rgba(0, 0, 0, 0.3);
+	border-radius: 14px;
+	box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+	text-align: center;
+	transition: all .3s ease-in-out;
+	font-size: 22px;
+	letter-spacing: 3px;
+}
+
+
+/*頁籤div內容*/
+.Content>div {
+	clear: both;
+	padding: 0 15px;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+/*頁籤變換*/
+span~#tab>ul li:first-child a,
+#tab-1:target~#tab>ul li a[href$="#tab-1"],
+#tab-2:target~#tab>ul li a[href$="#tab-2"],
+#tab-3:target~#tab>ul li a[href$="#tab-3"],
+#tab-4:target~#tab>ul li a[href$="#tab-4"] {
+	border: solid 1px red;
+}
+
+/*頁籤內容顯示*/
+#tab-1:target~#tab div.tab-content-1,
+#tab-2:target~#tab div.tab-content-2,
+#tab-3:target~#tab div.tab-content-3,
+#tab-4:target~#tab div.tab-content-4 {
+	border: solid 1px red;
+}
+
+span:target~.Content>div:first-of-type {
+	visibility: hidden;
+	height: 0;
+	padding: 0 15px;
+}
+
+/*頁籤內容顯示&第一筆*/
+span~.Content>div:first-of-type,
+#tab-1:target~#tab div.tab-content-1,
+#tab-2:target~#tab div.tab-content-2,
+#tab-3:target~#tab div.tab-content-3,
+#tab-4:target~#tab div.tab-content-4 {
+	visibility: visible;
+	height: auto;
+}
+
+@media screen and (max-width: 1200px) {
+
+	.sidebar_left {
+
+		margin-bottom: 50px;
+		width: 100%;
+		height: auto;
+		text-align: center;
+	}
+
+	.Content {
+		display: inline-block;
+		margin-bottom: 50px;
+		width: 85%;
+		min-height: 100%;
+		background-color: #F2FFF2;
+		font-size: 20px;
+		text-align: left;
+		padding: 2% 5%;
+	}
+
+	.sidebar_right {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 50px;
+		width: 15%;
+		min-height: 100%;
+		height: auto;
+		background-color: #FFECC9;
+		text-align: center;
+	}
+
+	.type {
+		display: inline-block;
+		width: 20%;
+		margin: 15px 20px;
+	}
+
+
+}
